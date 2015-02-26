@@ -1,0 +1,19 @@
+{% extends "gitlink/base.html" %}
+{% block page_body %}
+
+        {% if payloads %}
+        <a href="{% url 'logout' %}">Logout</a><br /><br />
+        <a href="{% url 'gitlink' %}">Go Back</a><br /><br />
+        <h2>Captured Push/Pull Events</h2>
+        <ul>
+            {% for p in payloads %}
+                <li><a href="{{ p.url }}">{{ p.message }}</a></li>
+            {% endfor %}
+        </ul>
+
+        {% else %}
+            <h4>:( No Events Registered yet, come back <a href="{% url 'gitlink' %}">later!</a></h4>
+        {% endif %}
+
+{% endblock page_body %}
+

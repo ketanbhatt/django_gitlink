@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block page_title %}Makeystreet{% endblock page_title %}</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="background-color:seagreen">
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% block page_heading %}
+    <div style="text-align:center">
+        <h1>Gitlink</h1>
+        <h4>by Makeystreet</h4>
+    </div>
+{% endblock page_heading %}
+{% block page_body %}
+    Github for Hardware
+{% endblock page_body %}
+</body>
+</html>

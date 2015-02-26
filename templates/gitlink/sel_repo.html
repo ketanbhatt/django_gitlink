@@ -1,0 +1,17 @@
+{% extends "gitlink/base.html" %}
+{% block page_body %}
+
+        <a href="{% url 'logout' %}">Logout</a><br />
+
+        <form method='POST' action="{% url 'sel_repo' %}">
+        {% csrf_token %}
+            {% for r in repos %}
+                <input type='radio' name='repo' value='{{ r.name }}'>{{ r.name }}
+                <br />
+            {% endfor %}
+
+            <input type='submit' value='Select Repo'>
+
+        </form>
+
+{% endblock page_body %}
