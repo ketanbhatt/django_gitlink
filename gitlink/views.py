@@ -145,6 +145,7 @@ def payload(request):
 
 @login_required
 def view_payloads(request):
-    payloads = Payload.objects.filter(for_user=request.user)
+    user = UserProfile.objects.get(user = request.user)
+    payloads = Payload.objects.filter(for_user=user)
 
     return render(request, 'gitlink/view_payloads.html', {'payloads' : payloads})
