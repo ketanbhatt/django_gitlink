@@ -1,5 +1,5 @@
 """
-Django settings for makeystreet project.
+Django settings for django_gitlink project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -83,9 +83,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'makeystreet.urls'
+ROOT_URLCONF = 'django_gitlink.urls'
 
-WSGI_APPLICATION = 'makeystreet.wsgi.application'
+WSGI_APPLICATION = 'django_gitlink.wsgi.application'
 
 
 # Database

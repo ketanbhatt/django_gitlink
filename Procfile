@@ -1,1 +1,1 @@
-web: gunicorn makeystreet.wsgi --log-file -
+web: gunicorn django_gitlink.wsgi --log-file -
